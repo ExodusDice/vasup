@@ -1,0 +1,142 @@
+{
+  "profile": {
+    "userName": "Frank",
+    "workspaceName": "VASUP In-House & WFH Workspace",
+    "pcName": "WFH-Home-PC",
+    "corporateNotebookId": "VASUP-InHouse-NB01",
+    "activeDevice": "WFH (Home PC)"
+  },
+  "notes": [
+    {
+      "id": "note-1",
+      "title": "WFH ↔ VASUP In-House Office Integration Guide",
+      "content": "# WFH (Home PC) ↔ VASUP In-House Office Hub\n\nThis workspace bridges your **Work From Home (WFH)** setup with the **VASUP In-House Office** environment.\n\n### Daily WFH Workflow:\n1. **VPN & Access**: Launch your In-House VPN or Remote Gateway from the Quick Portals tab.\n2. **Cross-Device Drops**: Transfer meeting links, credentials, tokens, or scripts between your Home PC and In-House Notebook.\n3. **CRUD Controls**: Save, Edit, Download as Markdown/Text, and Delete any document or task.\n4. **In-House Standup**: Log daily tasks and export standup summaries for the office team.\n\n> *Pro Tip*: Use `Ctrl+K` anywhere to search notes, tasks, or trigger quick actions!",
+      "tags": [
+        "WFH",
+        "In-House",
+        "VASUP",
+        "Guide"
+      ],
+      "pinned": true,
+      "updatedAt": "2026-09-18T13:44:00.000Z"
+    },
+    {
+      "id": "note-2",
+      "title": "In-House Office Network & VPN Configuration",
+      "content": "## In-House Office Network Config\n\n- **Office Gateway**: `vpn.vasup.office`\n- **Intranet Domain**: `vasup.franktest.xyz` / `vasup.franktest.com`\n- **Remote Desktop / SSH Port**: `3389` / `22`\n- **In-House File Share**: Accessible via the Sync Hub Drop Zone.\n\n### Environment Sync Checklist:\n- [x] WFH Home PC Connected\n- [ ] In-House Corporate Notebook Connected\n- [ ] Daily Standup Updated",
+      "tags": [
+        "In-House",
+        "VPN",
+        "Network"
+      ],
+      "pinned": true,
+      "updatedAt": "2026-09-18T13:44:00.000Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-1",
+      "title": "Establish WFH to In-House Office Connection",
+      "description": "Verify VPN tunnel, file sync, and clipboard drops between Home PC and VASUP In-House Notebook.",
+      "status": "done",
+      "priority": "urgent",
+      "device": "Both",
+      "tags": [
+        "WFH",
+        "In-House",
+        "Core"
+      ],
+      "dueDate": "2026-09-20",
+      "createdAt": "2026-09-18T13:44:00.000Z"
+    },
+    {
+      "id": "task-2",
+      "title": "Sync In-House Corporate Notebook Files & Documents",
+      "description": "Drop necessary project documents and repositories for remote work.",
+      "status": "in_progress",
+      "priority": "high",
+      "device": "In-House Office",
+      "tags": [
+        "In-House",
+        "Files"
+      ],
+      "dueDate": "2026-09-21",
+      "createdAt": "2026-09-18T13:44:00.000Z"
+    },
+    {
+      "id": "task-3",
+      "title": "Prepare In-House Weekly Standup & Progress Report",
+      "description": "Summarize WFH activities and deliver progress report to the office team.",
+      "status": "to_do",
+      "priority": "medium",
+      "device": "WFH (Home PC)",
+      "tags": [
+        "Standup",
+        "Meeting"
+      ],
+      "dueDate": "2026-09-25",
+      "createdAt": "2026-09-18T13:44:00.000Z"
+    }
+  ],
+  "syncDrops": [
+    {
+      "id": "drop-1",
+      "type": "code",
+      "title": "In-House Office VPN / SSH Connect Command",
+      "content": "ssh -N -L 3001:localhost:3001 -L 5173:localhost:5173 frank@vasup-office-gateway",
+      "sourceDevice": "WFH (Home PC)",
+      "createdAt": "2026-09-18T13:44:00.000Z"
+    },
+    {
+      "id": "drop-2",
+      "type": "link",
+      "title": "In-House Daily Meeting Room",
+      "content": "https://meet.vasup.corporate/in-house-daily-sync",
+      "sourceDevice": "In-House Office",
+      "createdAt": "2026-09-18T13:44:00.000Z"
+    }
+  ],
+  "files": [],
+  "bookmarks": [
+    {
+      "id": "bm-1",
+      "title": "VASUP In-House Intranet Portal",
+      "url": "https://portal.vasup.corporate",
+      "category": "In-House Office",
+      "icon": "Building2",
+      "color": "emerald"
+    },
+    {
+      "id": "bm-2",
+      "title": "Office VPN / Remote Gateway",
+      "url": "https://vpn.vasup.corporate",
+      "category": "In-House Office",
+      "icon": "Server",
+      "color": "blue"
+    },
+    {
+      "id": "bm-3",
+      "title": "Corporate Mail / Outlook",
+      "url": "https://outlook.office.com",
+      "category": "In-House Office",
+      "icon": "Mail",
+      "color": "purple"
+    },
+    {
+      "id": "bm-4",
+      "title": "GitHub / GitLab Repository",
+      "url": "https://github.com",
+      "category": "Development",
+      "icon": "Code2",
+      "color": "teal"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-1",
+      "time": "13:30",
+      "description": "WFH ↔ In-House Office Workspace connected and synchronized",
+      "type": "system"
+    }
+  ]
+}
