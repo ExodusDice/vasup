@@ -18,12 +18,13 @@ For EVERY test case you execute or generate:
    - **`Step 1 (Pre-State)`**: Form filled before submission.
    - **`Step 2 (Challenge/Modal)`**: OTP challenge, PIN keypad, NDID selector, Dip-Chip animation, or confirmation dialog.
    - **`Step 3 (Result/Post-State)`**: Final success state, E-Slip modal, E-Verify green validation badge, or negative validation error alert.
-2. Save screenshots into a structured directory: `./test-results/screenshots/[MODULE_NAME]/[TC_ID]_[STEP_NAME].png`.
+2. Save all visual screenshots into the dedicated project directory:
+   📂 **`C:\Users\phatc\OneDrive\Desktop\project-wa\test-results\screenshots\[MODULE_NAME]\[TC_ID]_[STEP_NAME].png`**
 
-### MANDATORY TEST RESULT OUTPUT FORMAT:
-After test execution, the test runner MUST output test results in two required formats:
-1. **Markdown Execution Summary Table (`TEST_EXECUTION_REPORT.md`)** for QA and stakeholder sign-off.
-2. **Structured JSON Output (`test-results/results.json`)** for automated ALM ingestion and CI/CD pipelines.
+### MANDATORY TEST RESULT OUTPUT LOCATION:
+After test execution, the test runner MUST output test results into:
+1. **`C:\Users\phatc\OneDrive\Desktop\project-wa\TEST_EXECUTION_REPORT.md`** (Markdown Summary Table for QA & Pass/Fail status).
+2. **`C:\Users\phatc\OneDrive\Desktop\project-wa\test-results\results.json`** (Structured JSON for CI/CD pipelines).
 ```
 
 ---
@@ -198,7 +199,9 @@ Execute test flows and capture visual proof:
 import { test, expect } from '@playwright/test';
 import * as path from 'path';
 
-const SCREENSHOT_DIR = path.join(__dirname, 'test-results/screenshots');
+// Target Output Directory for Screenshots & Test Reports
+const TARGET_PROJECT_DIR = 'C:/Users/phatc/OneDrive/Desktop/project-wa';
+const SCREENSHOT_DIR = path.join(TARGET_PROJECT_DIR, 'test-results/screenshots');
 
 test.describe('BankY Complete Platform E2E Tests with Screenshots & Reports', () => {
 
