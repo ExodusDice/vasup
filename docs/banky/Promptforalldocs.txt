@@ -1,0 +1,21 @@
+can you help me here ?
+
+make a free website [public]
+the web site should allowed user to login
+basic function
+login
+register - with basic KYC
+has OTP
+has credit card loans
+can do all bank transfer
+can do QR code payment
+can do mobile transfer
+can do truewallet
+has basic otp security
+make PRD 
+make BRD
+make manual test case [ edge cases, positive test cases, negative test cases]
+make AI promp to test all the functions
+make some user graphic 
+
+

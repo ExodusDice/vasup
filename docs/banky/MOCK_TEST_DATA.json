@@ -1,0 +1,79 @@
+{
+  "test_environment": "https://vasup-1.vercel.app",
+  "version": "3.5.0",
+  "users": [
+    {
+      "role": "Demo Primary User",
+      "mobile": "0812345678",
+      "pin": "123456",
+      "citizen_id": "1103700000001",
+      "name": "Thanapon Somchai",
+      "kyc_method": "NDID (KBANK)",
+      "balance": 50000.0,
+      "credit_limit": 100000.0,
+      "kyc_verified": true
+    },
+    {
+      "role": "High-Value Step-Up User",
+      "mobile": "0899887766",
+      "pin": "529183",
+      "citizen_id": "3100500123456",
+      "name": "Nattapong Ruangrit",
+      "kyc_method": "Dip-Chip Reader",
+      "balance": 500000.0,
+      "credit_limit": 200000.0,
+      "kyc_verified": true
+    },
+    {
+      "role": "New Unverified User",
+      "mobile": "0861112233",
+      "pin": "Pass1234!",
+      "citizen_id": "1100400012341",
+      "name": "Kanya Thonglor",
+      "kyc_method": "e-KYC Pending",
+      "balance": 0.0,
+      "credit_limit": 0.0,
+      "kyc_verified": false
+    }
+  ],
+  "ndid_providers": [
+    { "bank": "KBANK", "ial": "2.3", "liveness_score": 99.8, "status": "APPROVED_IAL2_3" },
+    { "bank": "SCB", "ial": "2.3", "liveness_score": 99.6, "status": "APPROVED_IAL2_3" }
+  ],
+  "dipchip_smartcard": {
+    "valid_card": { "laser_code": "JT0-1293841-29", "dopa_match": true, "status": "DOPA_CHIP_VERIFIED" },
+    "tampered_card": { "laser_code": "INVALID", "dopa_match": false, "status": "ERR_CHIP_CORRUPTED" }
+  },
+  "account_opening": {
+    "product_name": "BankY Primary Digital Savings",
+    "issued_account_number": "089-2-88192-3",
+    "cif_number": "CIF-TH-2026-99120",
+    "interest_rate_pa": "1.75%"
+  },
+  "otp_pin_security": {
+    "valid_pin": "529183",
+    "demo_pin": "123456",
+    "weak_pins": ["123456", "654321", "111111", "999999"],
+    "sandbox_otp_bypass": "123456"
+  },
+  "promptpay_proxies": [
+    { "type": "mobile", "value": "089-123-4567", "name": "Thanapon Somchai" },
+    { "type": "mobile", "value": "089-876-5432", "name": "Ploy S. (Merchant POS)" },
+    { "type": "citizen_id", "value": "1-1037-00000-00-1", "name": "PromptPay Central Switch" },
+    { "type": "ewallet_id", "value": "14000-88192-38491", "name": "TrueMoney P2P Wallet" }
+  ],
+  "everify_slips": [
+    {
+      "ref_id": "BY-7721-9921",
+      "amount": 1500.0,
+      "hmac_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "is_valid": true
+    },
+    {
+      "ref_id": "BY-FORGED-01",
+      "amount": 99000.0,
+      "hmac_sha256": "INVALID_TAMPERED_HMAC_SIGNATURE",
+      "is_valid": false
+    }
+  ]
+}
